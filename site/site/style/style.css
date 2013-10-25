@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "police";
+    src: url('../young/Young.ttf');
+}
+
+.titre
+{
+	color:#fff;
+	text-align:center;
+	font-size: 15px;
+	line-height: 86px;
+	font-weight: 700;
+}
+
+.lienTitre, .lienTitre:hover
+{
+	text-decoration:none;
+	color:#fff;
+}
+
+.emilie, .emilie:hover
+{
+	text-decoration:none;
+	color:#999999;
+}
+
+.vignette{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+        filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+        -moz-filter: brightness(100%);
+        -o-filter: brightness(100%);
+        -ms-filter: brightness(100%);
+	height:100px;
+
+}
+div.vignette:hover{
+
+        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+
+}
+
+
+.centrage
+{
+	text-align:center;
+}
+
+#test
+{
+	background-image:url(../media/photo/miniature/test.jpg);
+}
+#test1
+{
+	background-image:url(../media/photo/miniature/test.jpg);
+}
+
+#photo1
+{
+	background-image:url(../media/photo/miniature/1.jpg);
+}
+#photo2
+{
+	background-image:url(../media/photo/miniature/2.jpg);
+}
+#photo3
+{
+	background-image:url(../media/photo/miniature/3.jpg);
+}
+#contain2
+{
+	margin-top:3%;
+}
+
+#accueil
+{
+	width:84%;
+	margin-left:0;
+	margin-left:0 auto;
+}
+div#ligne1:hover div.image1, div#ligne1:hover div.image2, div#ligne1:hover div.image3, div#ligne1:hover div.image4 {
+    		        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+    	}
+    	
+  div#ligne2:hover div.image5, div#ligne2:hover div.image6, div#ligne2:hover div.image7, div#ligne2:hover div.image8 {
+    		        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+    	}
+    	
+    	  div#ligne3:hover div.image9, div#ligne3:hover div.image10, div#ligne3:hover div.image11, div#ligne3:hover div.image12 {
+    		        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+    	}
+    	
+    	  div#ligne4:hover div.image13, div#ligne4:hover div.image14, div#ligne4:hover div.image15, div#ligne4:hover div.image16 {
+    		        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+    	}
+    	

@@ -96,7 +96,8 @@ session_start();
       <!-- Begin page content -->
       <div class="container">
         <div class="page-header">
-        <a href="index.php?p=accueil"><img src="titre.jpg"/></a>
+        <a href="index.php?p=accueil"><img src="emilie.png"/></a>
+      <a href="index.php?p=accueil"><img src="logo.png"/></a>
         <?php 
         	if(isset($_SESSION['mail']))
         	{

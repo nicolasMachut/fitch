@@ -5,13 +5,13 @@
 			<a href="index.php?p=video" class="lienTitre"><div class="span2 titre vignette image2" style="background-image:url(VIDEOS.jpg)"></div></a>
 		</li>
 		<li>
-			<a href="index.php?p=video"><div id="test" class="span2 vignette image1"></div></a>
+			<a href="index.php?p=video"><div id="test" class="span2 vignette image1" style="background-image:url(media/photo/miniature/TP.png);"></div></a>
 		</li>
 		<li>
-			<a href="index.php?p=video"><div id="test1" class="span2 vignette image3"></div></a>
+			<a href="index.php?p=video"><div id="test1" class="span2 vignette image3" style="background-image:url(media/photo/miniature/TS.png);" ></div></a>
 		</li>
 		<li>
-			<a href="index.php?p=video"><div id="test" class="span2 vignette image4"></div></a>
+			<a href="index.php?p=video"><div id="test" class="span2 vignette image4" style="background-image:url(media/photo/miniature/TP2.png);"></div></a>
 		</li>
 	</ul>
 </div>
@@ -50,7 +50,7 @@
 <div id="ligne4">
 	<ul class="thumbnails">
 		<li>
-			<a href="index.php?p=contact"><div id="test" class="span2 vignette image13"></div></a>
+			<a href="index.php?p=contact"><div id="test" class="span2 vignette image13" style="background-image:url(media/photo/miniature/F.png);"></div></a>
 		</li>
 		<li>
 			<a href="index.php?p=contact"><div id="test" class="span2 vignette image14"></div></a>

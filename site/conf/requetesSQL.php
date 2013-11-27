@@ -6,7 +6,7 @@ function getPhotos()
 	global $bdd;
 	$photos = array();
 	$reponse = $bdd -> query('
-			SELECT pho_nom FROM Photos
+			SELECT pho_lien FROM Photos
 			');
 	while( $donnee = $reponse-> fetch() )
 	{
@@ -41,6 +41,7 @@ function getVideos()
 }
 	
 	//------------------------------------------------------------------------------------------------------------------
+	
 	
 function getMusic()
 {
@@ -110,6 +111,18 @@ function addVideo()
 }
 	
 	//------------------------------------------------------------------------------------------------------------------
+	
+function addPhoto()
+{
+	global $bdd;
+	$reponse = $bdd -> query('
+			INSERT INTO Photos(pho_lien)
+			VALUE("'.$_REQUEST['lien'].'")
+			');
+	return 2;
+}
+
+//------------------------------------------------------------------------------------------------------------------
 	
 function addMusic()
 {

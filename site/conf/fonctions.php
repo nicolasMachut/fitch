@@ -2,13 +2,14 @@
 require_once'requetesSQL.php';
 
 
-function page($p)//Inclus les pages en fonction du paramètre
+function page($p)//Inclus les pages en fonction du paramètres
 {
 	switch ($p)
 	{
 		case $p : include $p.'.php';
 	}
 }
+
 	
 //----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -66,13 +67,13 @@ function displayAddMusic()//Affiche le formulaire d'ajout de music
 		<fieldset>
 			<legend>Ajouter une musique : </legend>
 		<form method="POST">
-			<textarea rows="4" id="lien" placeholder="Coller l'Id de la musique"></textarea>
+			<textarea rows="2" id="lien" placeholder="Coller l'Id de la musique"></textarea>
 			<button type="submit" class="btn" onclick="addMusic(); return false;">Valider</buton>
 		</form>
 	</fieldset>
 </span>
 <span class="span6">
-<?php displayFormClassement();?>
+	<?php displayFormClassement();?>
 </span>
 <script>
 window.onload = function() { loadDisplayMusic(); };
@@ -83,43 +84,24 @@ window.onload = function() { loadDisplayMusic(); };
 //----------------------------------------------------------------------------------------------------------------------------------------
 
 function displayAddPhoto()//Affiche le formulaire d'upload de photo
-{/*
+{
 	?>
-	<fieldset>
-	<legend>Ajouter une photo : </legend>
-<!-- The fileinput-button span is used to style the file input field as button -->
-    <span class="btn btn-success fileinput-button">
-        <i class="glyphicon glyphicon-plus"></i>
-        <span>Add files...</span>
-        <!-- The file input field used as target for the file upload widget -->
-        <input id="fileupload" type="file" name="files[]" multiple>
-    </span>
-     <br>
-    <br>
-    <!-- The global progress bar -->
-    <div id="progress" class="progress">
-        <div class="progress-bar progress-bar-success"></div>
-    </div>
-    <!-- The container for the uploaded files -->
-    <div id="files" class="files"></div>
-    <br>
-    </fieldset>
-    <?php */
-?>
-<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
-<div class="modal hide fade">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h3>Modal header</h3>
-</div>
-<div class="modal-body">
-<p>One fine body…</p>
-</div>
-<div class="modal-footer">
-<a href="#" class="btn">Close</a>
-<a href="#" class="btn btn-primary">Save changes</a>
-</div>
-</div><?php 
+	<span class="span6">
+		<fieldset>
+			<legend>Ajouter une photo : </legend>
+			<form method="POST">
+				<textarea rows="1" id="lien" placeholder="Coller l'Id de la photo"></textarea>
+				<button type="submit" class="btn" onclick="addPhoto(); return false;">Valider</buton>
+			</form>
+		</fieldset>
+	</span>
+	<span class="span6">
+	<?php displayFormClassement();?>
+</span>
+	<script>
+window.onload = function() { loadDisplayPhoto(); };
+</script>
+	<?php 
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------
@@ -194,6 +176,37 @@ function displayVideo($type)//Affiche les vidéos
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------
+
+function displayPhoto($type)//Affiche les photos
+{
+	
+	$photo = getPhotos();
+	if( $type == 1 )
+	{
+		echo'<fieldset><legend>Supprimer une photo :</legend>';
+		echo'<table class="table table-hover">';
+		echo'<th>Titre</th><th>Supprimer</th>';
+	}
+	foreach($photo as $p)
+	{
+		if( $type == 1 )
+		{
+			echo'<tr>';
+			echo'<td><a href="http://www.flickr.com/photos/yngw/8050603479/" title="_ de gwagwa, sur Flickr"><img src="http://farm9.staticflickr.com/8037/8050603479_8b703e45c5_s.jpg" width="75" height="75" alt="_"></a></td>';
+			echo'<td style="text-align:center" onclick="removePhoto('.$v['vid_id'].');"><i class="icon-remove"></i></td>';
+			echo'</tr>';
+		}
+		else
+		{
+			echo'<a href="http://www.flickr.com/photos/yngw/8050603479/" title="_ de gwagwa, sur Flickr"><img src="http://farm9.staticflickr.com/8037/8050603479_8b703e45c5_c.jpg" width="800" height="534" alt="_"></a>';
+		}
+	}
+
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 function displayUpdateVignette()
 {

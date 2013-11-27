@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "police";
-    src: url('../young/Young.ttf');
-}
-
 .titre
 {
 	color:#fff;
@@ -36,7 +31,8 @@
         -moz-filter: brightness(100%);
         -o-filter: brightness(100%);
         -ms-filter: brightness(100%);
-	height:100px;
+	height:94px;
+	
 
 }
 div.vignette:hover{
@@ -55,27 +51,6 @@ div.vignette:hover{
 	text-align:center;
 }
 
-#test
-{
-	background-image:url(../media/photo/miniature/TP.png);
-}
-#test1
-{
-	background-image:url(../media/photo/miniature/test.jpg);
-}
-
-#photo1
-{
-	background-image:url(../media/photo/miniature/1.jpg);
-}
-#photo2
-{
-	background-image:url(../media/photo/miniature/2.jpg);
-}
-#photo3
-{
-	background-image:url(../media/photo/miniature/3.jpg);
-}
 #contain2
 {
 	margin-top:3%;

@@ -18,5 +18,9 @@ switch($_REQUEST['requete'])
 		break;
 	case'loadDisplayMusic': displayMusic(1);
 		break;
+	case'addPhoto': addPhoto();
+		break;
+	case'loadDisplayPhoto' : displayPhoto(1);
+		break;
 	default;
 }

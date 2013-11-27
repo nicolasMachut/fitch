@@ -79,12 +79,6 @@ session_start();
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
   </head>
 
   <body>
@@ -96,8 +90,8 @@ session_start();
       <!-- Begin page content -->
       <div class="container">
         <div class="page-header">
-        <a href="index.php?p=accueil"><img src="emilie.png"/></a>
-      <a href="index.php?p=accueil"><img src="logo.png"/></a>
+        <a href="index.php?p=accueil"><img src="media/logo/emilie.png"/></a>
+      <a href="index.php?p=accueil"><img src="media/logo/logo.png"/></a>
         <?php 
         	if(isset($_SESSION['mail']))
         	{
@@ -105,11 +99,6 @@ session_start();
         		echo '<a href="admin/index.php"><i class="icon-edit"></i></a>'; 
         		echo'<p>'.$_SESSION['mail'].' est connecté en tant qu\'administrateur.</p>';    		
         	}
-        	//var_dump( getVideoInfo("http://www.youtube.com/watch?v=GuUGbG4N47w"));
-        	//$video = getVideoInfo("http://www.youtube.com/watch?v=qfhDqIVUpSg");
-        	//echo $video['titre'];   
-        	//echo $video['description'];
-        	//var_dump( $video['image']);
         ?>
         </div>
         </div>

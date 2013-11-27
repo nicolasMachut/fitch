@@ -153,10 +153,28 @@ function addMusic()
 
 function addPhoto()
 {
-	
+	var lien = document.getElementById('lien').value;
+	if(lien == '')
+	{
+		message("message", "Veuillez coller un lien pour ajouter une photo.", "alert alert-error");
+	}
+	else
+	{
+		xhr = creationXHR();
+		lien = encodeURIComponent(lien);
+		//alert(lien);
+	    xhr.open("GET", "../conf/requetesXHR.php?lien="+lien+"&requete=addPhoto", false);
+	    xhr.send(null);
+	    //alert(xhr.responseText);
+	    message("message", "La photo à bien été enregistrée.", "alert alert-success");
+	    document.getElementById('lien').value="";
+	    //alert(xhr.responseText);
+	    loadDisplayPhoto();
+	}
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------
+
 
 function displayVideo()
 {
@@ -181,6 +199,15 @@ function loadDisplayMusic()
 {
 	$.post('../conf/requetesXHR.php?requete=loadDisplayMusic', function(data, textStatus){
 		$('#displayMusic').html(data);
+	});
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+function loadDisplayPhoto()
+{
+	$.post('../conf/requetesXHR.php?requete=loadDisplayPhoto', function(data, textStatus){
+		$('#displayPhoto').html(data);
 	});
 }
 
